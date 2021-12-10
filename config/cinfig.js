@@ -3,5 +3,5 @@ module.exports = {
     expiresIn:14*24*60*60,
     user:0,
     admin:1,
-    superAdmin:2
+    superAdmin:2,
 }
