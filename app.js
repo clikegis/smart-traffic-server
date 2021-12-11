@@ -14,6 +14,7 @@ const index = require('./routes/index')
 const login = require('./routes/login')
 const token = require('./routes/token')
 const signUp = require('./routes/signUp');
+const eventType = require('./routes/eventType');
 
 // error handler
 onerror(app)
@@ -43,6 +44,7 @@ app.use(index.routes(), index.allowedMethods())
 app.use(login.routes(), login.allowedMethods())
 app.use(token.routes(), token.allowedMethods())
 app.use(signUp.routes(), signUp.allowedMethods())
+app.use(eventType.routes(), eventType.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
