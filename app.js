@@ -35,6 +35,7 @@ const addAdmin = require('./routes/addAdmin');
 const outline = require('./routes/outline');
 const online = require('./routes/online');
 const getUserStatus = require('./routes/getUserStatus');
+const changePassword = require('./routes/changePassword');
 
 
 // error handler
@@ -86,6 +87,7 @@ app.use(outline.routes(), outline.allowedMethods())
 app.use(addAdmin.routes(), addAdmin.allowedMethods())
 app.use(online.routes(), online.allowedMethods())
 app.use(getUserStatus.routes(), getUserStatus.allowedMethods())
+app.use(changePassword.routes(), changePassword.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
