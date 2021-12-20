@@ -20,6 +20,21 @@ const getEventNum = require('./routes/getEventNum');
 const getTableData = require('./routes/getTableData');
 const deleteEvent = require('./routes/deleteEvent');
 const updateEventStatus = require('./routes/updateEventStatus');
+const getAllEvent = require('./routes/getAllEvent');
+const updateEvent = require('./routes/updateEvent');
+const addroadStatus = require('./routes/addroadStatus');
+const getRoadSituation = require('./routes/getRoadSituation');
+const getsupposeFlows = require('./routes/getsupposeFlows');
+const getCurrntFlow = require('./routes/getCurrntFlow');
+const updateRoadStatus = require('./routes/updateRoadStatus');
+const getUserInfo = require('./routes/getUserInfo');
+const getAdminInfo = require('./routes/getAdminInfo');
+const updateUserInfo = require('./routes/updateUserInfo');
+const deleteUserInfo = require('./routes/deleteUserInfo');
+const addAdmin = require('./routes/addAdmin');
+const outline = require('./routes/outline');
+const online = require('./routes/online');
+const getUserStatus = require('./routes/getUserStatus');
 
 
 // error handler
@@ -56,6 +71,21 @@ app.use(getEventNum.routes(), getEventNum.allowedMethods())
 app.use(getTableData.routes(), getTableData.allowedMethods())
 app.use(deleteEvent.routes(), deleteEvent.allowedMethods())
 app.use(updateEventStatus.routes(), updateEventStatus.allowedMethods())
+app.use(getAllEvent.routes(), getAllEvent.allowedMethods())
+app.use(updateEvent.routes(), updateEvent.allowedMethods())
+app.use(addroadStatus.routes(), addroadStatus.allowedMethods())
+app.use(getRoadSituation.routes(), getRoadSituation.allowedMethods())
+app.use(getsupposeFlows.routes(), getsupposeFlows.allowedMethods())
+app.use(getCurrntFlow.routes(), getCurrntFlow.allowedMethods())
+app.use(updateRoadStatus.routes(), updateRoadStatus.allowedMethods())
+app.use(getUserInfo.routes(), getUserInfo.allowedMethods())
+app.use(getAdminInfo.routes(), getAdminInfo.allowedMethods())
+app.use(updateUserInfo.routes(), updateUserInfo.allowedMethods())
+app.use(deleteUserInfo.routes(), deleteUserInfo.allowedMethods())
+app.use(outline.routes(), outline.allowedMethods())
+app.use(addAdmin.routes(), addAdmin.allowedMethods())
+app.use(online.routes(), online.allowedMethods())
+app.use(getUserStatus.routes(), getUserStatus.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

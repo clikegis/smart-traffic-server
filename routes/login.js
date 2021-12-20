@@ -11,9 +11,10 @@ router.get('/login', async (ctx, next) => {
         const token = await verify(account,password);
         const type = await new Promise((resolve,reject)=>{
             db(`select * from account where account='${account}' and password='${password}'`,(err,data)=>{
-                resolve(data[0].type);
+                resolve(data[0]);
             })
         });
+
         ctx.body = {
             token,
             type
