@@ -16,7 +16,6 @@ router.post('/addEvent',async (ctx)=>{
 
     const res = await new Promise((resolve,reject)=>{
         const queryWord = `insert into event VALUES('${eid}','${type}',${classnum},'${date}','${place}','${carnumber}','${driver}',${status},${lon},${lat},0)`;
-        console.log(queryWord);
         db(queryWord,(err,data)=>{
             if(err){
                 resolve({
