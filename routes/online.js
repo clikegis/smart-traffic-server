@@ -4,9 +4,9 @@ let router = koaRouter();
 
 router.get('/online',async (ctx)=>{
     let res;
-    let account = ctx.query.account;
+    let id = ctx.query.id;
 
-    const queryWord = `update account set status=1 where account='${account}'`;
+    const queryWord = `update account set status=1 where id='${id}'`;
     console.log(queryWord);
     try{
         res = await new Promise((resolve,reject)=>{
